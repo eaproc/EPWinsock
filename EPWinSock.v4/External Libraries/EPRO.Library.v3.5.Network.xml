@@ -1,0 +1,442 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EPRO.Library.v3.5.Network
+</name>
+</assembly>
+<members>
+<member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.MonitoringInterface">
+	<summary>
+ The Network Interface we are monitoring
+ </summary>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.PassedIn___TargetReceiveBandwithInKb">
+	<summary>
+ This will be the Maximum Reference of the Bandwith Receive Usage
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.PassedIn___TargetReceiveBandwithInBytes">
+	<summary>
+ This will be the Maximum Reference of the Bandwith Receive Usage
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.BandwidthMonitor._________thrFillUpStats">
+	<summary>
+ Thread Manager for this Class
+ </summary>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.isClassOnline">
+	<summary>
+ Indicate if this class is working
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.ReceivedBytesStartingPoint">
+	<summary>
+ Keep the Last Receive Byte Value to know when the interface is reset
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.TotalBytesReceived">
+	<summary>
+ Save the Current Total Bytes Received
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.AccumulatedTotalReceivedBytes">
+	<summary>
+ The accumulated total bytes even when the Interface has been restarted
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.getTotalBytesReceived">
+	<summary>
+ Gets the Total Bytes Received on this interface since this class has been initialized
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.isBandwidthReceivedUsedUp">
+	<summary>
+ Checks if the TargetReceived  in bytes size has been ment
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.getTargetRecievedLeftInBytes">
+	<summary>
+ Returns the Target Received Left in Bytes ... but returns 0 if targe is already met
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.getTargetRecievedLeftInKb">
+	<summary>
+ Returns the Target Received Left in Kb ... but returns 0 if targe is already met
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.getTargetRecievedLeftInMb">
+	<summary>
+ Returns the Target Received Left in Mb ... but returns 0 if targe is already met
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.BandwidthMonitor.getTargetRecievedLeftInMbSingleFormat">
+	<summary>
+ Returns the Target Received Left in Mb and in single 2 decimal places
+ ... but returns 0 if targe is already met
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.BandwidthMonitor.#ctor(System.Net.NetworkInformation.NetworkInterface,System.UInt64)">
+	<summary>
+ Create new Bandwidth Monitor. If there is a problem initializing this class due to NICs. It doesnt count
+ </summary>
+	<param name="NIC"></param>
+	<param name="pTargetReceiveBandwithInKb">The Target Recieve Bandwidth</param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.BandwidthMonitor.#ctor(System.String,System.UInt64,System.Int64)">
+	<summary>
+ Use the Server IP Address to get which NIC is connected if many NIC is available. Else default NIC is used
+ </summary>
+	<param name="NICServerIPonSameNetwork"></param>
+	<param name="pTargetReceiveBandwithInKb"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.BandwidthMonitor.#ctor(System.UInt64)">
+	<summary>
+ Use default NIC 
+ </summary>
+	<param name="pTargetReceiveBandwithInKb"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.BandwidthMonitor.SetNewStateValues">
+	<summary>
+ Set new values to this class depending on the state of the Interface
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.BandwidthMonitor.FetchMatchingInterface(System.String)">
+	<summary>
+ Fetch the Network interface. If no match found it returns the first interface
+ </summary>
+	<param name="IPv4Address"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v3._5.Network.BandwidthMonitor">
+	<summary>
+ Monitors the BandwidthUsage of an Interface. Events are on separate threads
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.GetHostNameFromIP(System.String@)">
+	<summary>
+ Coverts IP Address to HostName
+ </summary>
+	<param name="IP"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.getMyIpAddress">
+	<summary>
+ Returns this system IP Address
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.CanConnectToInternet">
+	<summary>
+ Indicate if this computer can connect to internet
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.GetPageSource(System.String)">
+	<summary>
+ Get the http document of a url. the html codes of the page
+ </summary>
+	<param name="url"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.CheckForUpdate(System.String,System.String,System.String@)">
+	<summary>
+ Check for software updating using the url provided. The version is returned in html <version>
+		</version>
+	</summary>
+	<param name="CurrentVersion">The version Documented online. Returned ByRef</param>
+	<param name="InstalledApplicationVersion">The Version installed on this pc</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.CheckForUpdate(System.String,System.String,EPRO.Library.v3._5.Network.EHttpRequest@,System.String@)">
+	<summary>
+ Check for software updating using the url provided. The version is returned in html <version>
+		</version>
+ This copy is not perfect yet
+ </summary>
+	<param name="CurrentVersion">The version Documented online. Returned ByRef</param>
+	<param name="InstalledApplicationVersion">The Version installed on this pc</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.CheckForUpdate(System.String,System.String,System.String@,System.String@)">
+	<summary>
+ Check for software updating using the url provided. The version is returned in html <version>
+		</version>
+ Also Url with <url></url>
+	</summary>
+	<param name="CurrentVersion">The version Documented online. Returned ByRef</param>
+	<param name="InstalledApplicationVersion">The Version installed on this pc</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.parseIP(System.Net.IPAddress)">
+	<summary>
+ Check Whether the IP Entered is in a correct format [IP v4]. 
+ Min: 0.0.0.0
+ Max: 255.255.255.255
+ </summary>
+	<param name="IP">Ip Address to check</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.parseIP(System.String)">
+	<summary>
+ Check Whether the IP Entered is in a correct format [IP v4]. 
+ Min: 0.0.0.0
+ Max: 255.255.255.255
+ </summary>
+	<param name="IP">Ip Address to check</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.GetSystemsOnLAN">
+	<summary>
+ Process of Fetching Systems on LAN could be disturbing so allow enough time to list ...
+ Once first list is completed and count is more than one in any of the lsv ... increase interval to
+ 10 secs but this assignment can be edited by users in options
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.GetMacAddress">
+	<summary>
+ Get Default NIC Mac Address .. because by default it returns it in order of activity
+ </summary>
+	<returns>The Mac Address without any delimiter [12 Chars]</returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.isIPNetworkSame(System.String,System.String)">
+	<summary>
+ Checks if the ips are on the same network. like 192.168.5 and 192.168.56 are not
+ </summary>
+	<param name="Ip1"></param>
+	<param name="Ip2"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.getAllIpsOnMyComputer">
+	<summary>
+ Returns all valid Ip connection on this Computer. Separated with Comma(,)
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.Network.getValidIP_Relating_To(System.String[],System.String)">
+	<summary>
+ Get an Ip relating to another IP from many Ips
+ </summary>
+	<param name="Ips"></param>
+	<param name="relatingToIp"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.EWebClient.WebClientURLFormat.CompressedFormat">
+	<summary>
+ Get the URL and Parameters on a single string
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v3._5.Network.EWebClient.WebClientURLFormat">
+	<summary>
+ Holds a Format that is readable and usable for this class
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.EWebClient.MyWait">
+	<summary>
+ Maintain the waiting Process
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.EWebClient.client">
+	<summary>
+ Use Locally ... and Monitor
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.EWebClient.StartTime">
+	<summary>
+ Last Request Start Time
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.EWebClient.LastRequestUsedSecs">
+	<summary>
+ Keeps records of how many secs it takes to complete a request
+ </summary>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v3._5.Network.EWebClient.ReplyUploadValues">
+	<summary>
+ User should have a copy of this to use that method
+ </summary>
+	<param name="ResponseText"></param>
+	<param name="ErrorOccurred"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EWebClient.UploadValuesReturning(System.String,System.Boolean)">
+	<summary>
+ Returns Only through here
+ </summary>
+	<param name="ResponseText"></param>
+	<param name="ErrorOccurred"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EWebClient.UploadValues(System.String,EPRO.Library.v3._5.Network.EWebClient.ReplyUploadValues,System.Collections.Specialized.NameValueCollection)">
+	<summary>
+ Uses Post method to fetch URL. NOTE: You are responsible for empty result
+ </summary>
+	<param name="URL"></param>
+	<param name="CallBackFunc"></param>
+	<param name="reqparm"></param>
+	<remarks>NB: Simulating Sync for this Async Sub will not work for long reply request</remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EWebClient.UploadValues2(System.String,EPRO.Library.v3._5.Network.EWebClient.ReplyUploadValues,System.Collections.Specialized.NameValueCollection)">
+	<summary>
+ Uses Post method to fetch URL. NOTE: You are responsible for empty result
+ </summary>
+	<param name="URL"></param>
+	<param name="CallBackFunc"></param>
+	<param name="reqparm"></param>
+	<remarks>NB: Simulating Sync for this Async Sub will not work for long reply request</remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EWebClient.UploadValuesSync(System.String,System.Collections.Specialized.NameValueCollection)">
+	<summary>
+ Upload data using a POST Method Synchronously
+ </summary>
+	<param name="URL"></param>
+	<param name="reqparm"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EWebClient.DownloadFileFromURLSync(System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="URL">It will download the document of this url as a file</param>
+	<param name="FileName">The File name it will save it with locally</param>
+	<returns></returns>
+	<remarks>Note Only the Readable Source from browser</remarks>
+</member><member name="T:EPRO.Library.v3._5.Network.EWebClient">
+	<summary>
+ Handles Posting of Information to a URL
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.EHttpRequest.MyWait">
+	<summary>
+ Maintain the waiting Process
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.EHttpRequest.StartTime">
+	<summary>
+ Last Request Start Time
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.EHttpRequest.LastRequestUsedSecs">
+	<summary>
+ Keeps records of how many secs it takes to complete a request
+ </summary>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v3._5.Network.EHttpRequest.ReplyUploadValues">
+	<summary>
+ User should have a copy of this to use that method
+ </summary>
+	<param name="ResponseText"></param>
+	<param name="ErrorOccurred"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EHttpRequest.UploadValues(System.String)">
+	<summary>
+ Upload Information Synchronously
+ </summary>
+	<param name="URL"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EHttpRequest.UploadValues(System.String,System.Collections.Specialized.NameValueCollection)">
+	<summary>
+ Upload Information Synchronously
+ </summary>
+	<param name="URL"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EHttpRequest.UploadValuesAsync(System.String,EPRO.Library.v3._5.Network.EHttpRequest.ReplyUploadValues)">
+	<summary>
+ Upload Information Asynchronously
+ </summary>
+	<param name="URL"></param>
+	<param name="CallBackFunc"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EHttpRequest.UploadValuesAsync(System.String,EPRO.Library.v3._5.Network.EHttpRequest.ReplyUploadValues,System.Collections.Specialized.NameValueCollection,System.Boolean)">
+	<summary>
+ Upload Information Asynchronously
+ </summary>
+	<param name="URL"></param>
+	<param name="CallBackFunc"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EHttpRequest.UploadValuesAsyncReturn(System.IAsyncResult)">
+	<summary>
+ Asynchronous Operation Returning
+ </summary>
+	<param name="asynchronousResult"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.EHttpRequest.UploadValuesReturning(System.String,System.Boolean)">
+	<summary>
+ Returns Only through here
+ </summary>
+	<param name="ResponseText"></param>
+	<param name="ErrorOccurred"></param>
+	<remarks></remarks>
+</member><member name="P:EPRO.Library.v3._5.Network.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:EPRO.Library.v3._5.Network.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:EPRO.Library.v3._5.Network.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:EPRO.Library.v3._5.Network.WebClientDownloader.#ctor(System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Logical Ignore Download will check if the file with same name exists. It will not download it again.
+ </summary>
+	<param name="pUseLogicalIgnoreDownloadIfExist">Indicates if Download should be counted as downloaded if it already exists</param>
+	<param name="pDeleteDownloadedFileAfterRaisingEvent">It will try to force delete the downloaded file if indicated after raising event</param>
+	<remarks>Throws exception if creation of Directory Fails</remarks>
+</member><member name="F:EPRO.Library.v3._5.Network.WebClientDownloader._____IsSelfTerminated">
+	<summary>
+ It only self terminates if it discovers the file name already exists
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.WebClientDownloader.Download(System.String)">
+	<summary>
+ Throws Exceptions. It extracts file name from URL
+ </summary>
+	<param name="pURL"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v3._5.Network.WebClientDownloader.Download(System.String,System.String)">
+	<summary>
+ Throws Exceptions. Downloads Data Asynchronous
+ </summary>
+	<param name="pURL"></param>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v3._5.Network.WebClientDownloader">
+	<summary>
+ Downloads File Using WebClient. Reusable. 
+ -   It doesn't have resume capability
+ -   It doesn't save downloads partially on disk
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

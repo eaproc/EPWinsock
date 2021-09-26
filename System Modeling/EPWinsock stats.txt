@@ -1,0 +1,145 @@
+Summary- Advantages
+-------------------------
+
+-	Maximize User Architecture. If user runs on WLAN user can get almost * 2 the speed of LAN
+-	Works perfectly with devices connected on different network types (e.g. LAN with NAT).
+-	Auto detects disconnected/Idle devices.
+-	Protects data integrity - It ensures All packets are arrive completely before delivery else no delivery
+-	Prevents network congestion by avoiding multiple send request at same time on a single connection 
+-	Handles Cross Threading if specified by developer. It invokes all event on the Parent Control
+
+
+
+=============================================LAN - 1500bytes= 100MB/s=====================================================
+
+-file 2,548KB,	With progress display
+on same network
+@1KB packet size	-1594 ms
+
+@2KB packet size	-750 ms
+
+@4KB packet size	-562 ms
+
+@8KB packet size	-312 ms
+
+@16KB packet size	-188 ms
+
+
+
+
+
+-file 2,548KB,	Without progress display
+on same network
+@1KB packet size	-1344 ms
+
+@2KB packet size	-765 ms
+
+@4KB packet size	-437 ms
+
+@8KB packet size	-225 ms
+
+@16KB packet size	-156 ms
+
+
+
+
+
+
+
+
+-file 763KB,	Without progress display
+on same network
+@1KB packet size	-547 ms
+
+@2KB packet size	-281 ms
+
+@4KB packet size	-141 ms
+
+@8KB packet size	-109 ms
+
+@16KB packet size	-125 ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---- currently only @1KB works from different network
+on different network
+
+
+
+
+
+
+-file 2,548KB,	Without progress display
+on different network
+@1KB packet size	-1100 ms
+
+@2KB packet size	-498 ms
+
+@4KB packet size	-328 ms
+
+@8KB packet size	-161 ms
+
+@16KB packet size	-98 ms
+
+
+
+
+
+
+-file 763KB,	Without progress display
+on same network
+@1KB packet size	-263 ms
+
+@2KB packet size	-161 ms
+
+@4KB packet size	-98 ms
+
+@8KB packet size	-72 ms
+
+@16KB packet size	-41 ms
+
+@32KB packet size	-29 ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+=============================================WLAN - 7981====150MB/s==================================================
+
+
+-file 763KB,	Without progress display
+on same network
+@1KB packet size	-160 ms
+
+@2KB packet size	-150 ms
+
+@4KB packet size	-77 ms
+
+@8KB packet size	-69 ms
+
+@16KB packet size	-22 ms
+
+@32KB packet size	-16 ms

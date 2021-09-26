@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "sckServer", "sckServer\sckServer.vbproj", "{F7470120-B1B6-4271-A4B2-9985255271F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Debug|x86.ActiveCfg = Debug|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Debug|x86.Build.0 = Debug|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Release|Any CPU.ActiveCfg = Release|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Release|x86.ActiveCfg = Release|x86
+		{F7470120-B1B6-4271-A4B2-9985255271F2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+CLIENTS  
+	==>As small as possible	
+	==> Custimizable Color|Theme
+	==> Personalize Name
+	==> SET NickName Using GUI or Command [-C SET Nick AnythingElse is acceptted as nickname]
+	
+	
+	==>Connect to Other Client
+		==> using command [-C CONNECT ME TO 1123] |Automatically
+		==> -C Disconnect ME
+		==> A client at a time
+	
+	
+	==>Connected Clients are highlighted Green
+	
+	==> Display Available Clients with their nick names if available
+	==> Message encryption
+
+
+SERVER
+
+	==> Manage Connections
+		==>Handle Commands
+	==> broadcast availble clients every 2 secs
+	

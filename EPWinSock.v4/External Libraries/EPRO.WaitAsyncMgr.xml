@@ -1,0 +1,127 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EPRO.WaitAsyncMgr
+</name>
+</assembly>
+<members>
+<member name="M:EPRO.WaitAsyncMgr.WaitAsync.#ctor(System.String,System.String)">
+	<summary>
+ All Extra Threads are backgrounds. 
+ Beaware the wait process is auto initiated on instantiation[Creation of this class]
+ </summary>
+	<remarks>NB: Beaware the wait process is auto initiated on instantiation[Creation of this class]</remarks>
+</member><member name="P:EPRO.WaitAsyncMgr.WaitAsync.isActive">
+	<summary>
+ To know if this class is running an instance already
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.endWaiting">
+	<summary>
+ Ends a waiting era if you are waiting already
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.startWaiting(System.String,System.String)">
+	<summary>
+ Initialize Waiting Era
+ </summary>
+	<param name="sCaption"></param>
+	<param name="sDescription"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.setCaption(System.String)">
+	<summary>
+ Set the Caption of the Pls Wait form
+ </summary>
+	<param name="sCaption">The default is [Please Wait]</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.setDescription(System.String)">
+	<summary>
+ Set the Description of the Pls Wait form
+ </summary>
+	<param name="sDescription"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.setProgressBar(System.Int64,System.Int64)">
+	<summary>
+ Set the Progress of this Wait
+ </summary>
+	<param name="MaxProgress"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.setWaitValues(System.String,System.String)">
+	<summary>
+ Set the values of the Wait Display
+ </summary>
+	<param name="sCaption"></param>
+	<param name="sDescription"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.setWaitValues(System.Int64,System.Int64,System.String,System.String)">
+	<summary>
+ Set the values of the Wait Display
+ </summary>
+	<param name="sCaption"></param>
+	<param name="sDescription"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.WaitDisplay(System.Int64)">
+	<summary>
+ NB: This method is SYNC. It will block your thread for the duration of time set and keeps displaying this wait form for that duration
+ </summary>
+	<param name="lngMillisecs"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.runAsyncThread">
+	<summary>
+ Initiate the Second thread and return response to user
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.startAsyncThread">
+	<summary>
+ Second Thread Initiated and Blocked
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.WaitAsync.Dispose">
+	<summary>
+ You can not use this class even after you have disposed it because it is not a good habit.
+ When you dispose a class, you should set local copy to nothing ...
+ You should create a new instance to use it again.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:EPRO.WaitAsyncMgr.WaitAsync">
+	<summary>
+ Manages a Please Wait Operation and Display current operation to user without hanging the PC
+ </summary>
+	<remarks>NB: This class only allow 1 usage per instance</remarks>
+</member><member name="P:EPRO.WaitAsyncMgr.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:EPRO.WaitAsyncMgr.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:EPRO.WaitAsyncMgr.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:EPRO.WaitAsyncMgr.Forms.WaitForm.stopWaiting">
+	<summary>
+ Created this interface to communicate because of multi-threading
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.WaitAsyncMgr.Forms.WaitForm.setProgressBar(System.UInt64,System.UInt64)">
+	<summary>
+ Allows the display of ProgressBar
+ </summary>
+	<param name="MaxProgress"></param>
+	<param name="CurrentProgress"></param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

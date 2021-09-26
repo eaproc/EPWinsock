@@ -1,0 +1,103 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EPRO.Ciphers.v4.Substitutional
+</name>
+</assembly>
+<members>
+<member name="M:EPRO.Ciphers.v4.Substitutional.CI.Keyless.#ctor(System.Boolean)">
+	<summary>
+ Create Case Insentive Cipher Class. Covers ONLY chars from 32 to 126. All output are CAPS
+ </summary>
+	<param name="isShuffled"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Ciphers.v4.Substitutional.CI.Keyless.Encrypt(System.String)">
+	<summary>
+ Encrypts data. NB: Data will be converted to UpperCase
+ </summary>
+	<param name="strVal">String to Encrpt</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Ciphers.v4.Substitutional.CI.Keyless.Decrypt(System.String)">
+	<summary>
+ Decrypts Text. Output will be in Upper case but INPUT is case sensitive
+ </summary>
+	<param name="strVal">Case Sensitive Cipher Text</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Ciphers.v4.Substitutional.CI.Keyless">
+	<summary>
+ Runs a Case InSensitive Substitutional Cipher and Produces Case Sensitive Cipher Text
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Ciphers.v4.Substitutional.CS.Keyless.#ctor(System.Boolean)">
+	<summary>
+ Create Case Sentive Cipher Class. Covers ONLY chars from 0 to 495. UTF-8
+ </summary>
+	<param name="isShuffled"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Ciphers.v4.Substitutional.CS.Keyless.Encrypt(System.String)">
+	<summary>
+ Encrypts data.
+ </summary>
+	<param name="strVal">String to Encrpt</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Ciphers.v4.Substitutional.CS.Keyless.Decrypt(System.String)">
+	<summary>
+ Decrypts Text. 
+ </summary>
+	<param name="strVal">Case Sensitive Cipher Text</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Ciphers.v4.Substitutional.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:EPRO.Ciphers.v4.Substitutional.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:EPRO.Ciphers.v4.Substitutional.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:EPRO.Ciphers.v4.Substitutional.CS.CipherTableSegment.StoredString">
+	<summary>
+ Get generated tables
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:EPRO.Ciphers.v4.Substitutional.CS.CipherTableSegment.SegmentEndPoint.hasNext">
+	<summary>
+ Inidicate if it is new or still has value infront
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Ciphers.v4.Substitutional.Exceptions.InvalidCharacterException">
+	<summary>
+ Pops when a character can not be encrypted
+ </summary>
+	<remarks></remarks>
+</member><member name="T:EPRO.Ciphers.v4.Substitutional.Exceptions.InvalidCipherTextException">
+	<summary>
+ Pop when the Cipher Text contains invalid info
+ </summary>
+	<remarks></remarks>
+</member><member name="T:EPRO.Ciphers.v4.Substitutional.Exceptions.SegmentInitializationException">
+	<summary>
+ Throw if error Occurs while creating the segments for cipher table
+ </summary>
+	<remarks></remarks>
+</member><member name="T:EPRO.Ciphers.v4.Substitutional.Exceptions.InvalidClassException">
+	<summary>
+ Throw if a class was not initiated properly
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

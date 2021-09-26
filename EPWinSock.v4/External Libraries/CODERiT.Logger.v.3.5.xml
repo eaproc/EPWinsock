@@ -1,0 +1,183 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CODERiT.Logger.v.3.5
+</name>
+</assembly>
+<members>
+<member name="M:CODERiT.Logger.v._3._5.Exceptions.EException.#ctor">
+	<summary>
+ Empty Exception with Environment.Stack Trace
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Exceptions.EException.#ctor(System.String,System.Exception)">
+	<summary>
+ For customized or user friendly message
+ </summary>
+	<param name="MSG">User Friendly</param>
+	<param name="ex">Raw Exception</param>
+	<remarks></remarks>
+</member><member name="P:CODERiT.Logger.v._3._5.Exceptions.EException.______Problem">
+	<summary>
+ This is the general title
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CODERiT.Logger.v._3._5.Exceptions.EException.______Causes">
+	<summary>
+ Contains stack trace
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CODERiT.Logger.v._3._5.Exceptions.EException.______Solutions">
+	<summary>
+ All messages. You can add to it or you can write your own
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.#ctor(System.Type)">
+	<summary>
+ Use proxy constructors .Load()
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.#ctor(System.Type,CODERiT.Logger.v._3._5.Log1.Modes,System.Boolean)">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="P:CODERiT.Logger.v._3._5.Log1.LogFileFullPath">
+	<summary>
+ The FullPath of the Log File
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CODERiT.Logger.v._3._5.Log1.Mode">
+	<summary>
+ Gets or Sets the Logger Mode
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CODERiT.Logger.v._3._5.Log1.DefaultSource">
+	<summary>
+ Gets or Sets the Logger Source
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Log(System.String)">
+	<summary>
+ Create a Log
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Log(System.Exception)">
+	<summary>
+ Create a Log
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Write(System.String)">
+	<summary>
+ Create a Log
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Write(System.Exception)">
+	<summary>
+ Create a Log
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Print(System.String)">
+	<summary>
+ Create a Log
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Print(System.Exception)">
+	<summary>
+ Create a Log. Converts the Exception to EException before printing
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Print(CODERiT.Logger.v._3._5.Exceptions.EException)">
+	<summary>
+ Create a Log. Converts the Exception to EException before printing
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Print(System.String,System.Exception)">
+	<summary>
+ Create a Log. Converts the Exception to EException before printing
+ </summary>
+	<param name="OrginalException"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Read(System.String)">
+	<summary>
+ Create a Log. and return as EException message
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Read(System.Exception)">
+	<summary>
+ Create a Log. Converts the Exception to EException before printing
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Read(CODERiT.Logger.v._3._5.Exceptions.EException)">
+	<summary>
+ Create a Log. Converts the Exception to EException before printing
+ </summary>
+	<param name="LogMsg"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.Read(System.String,System.Exception)">
+	<summary>
+ Create a Log. Converts the Exception to EException before printing
+ </summary>
+	<param name="OrginalException"></param>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.isFolderWritable(System.String)">
+	<summary>
+ Confirms if this current process has write permission to a folder
+ </summary>
+	<param name="folder__full__path"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.get_Code_File_StartUp_Path(System.Type)">
+	<summary>
+ Return the Only File path WITHOUT the file name for the type that was sent
+ </summary>
+	<param name="objType"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CODERiT.Logger.v._3._5.Log1.get_Code_File_StartUp_File_FullPathName(System.Type)">
+	<summary>
+ Return the File path with the file name for the type that was sent
+ </summary>
+	<param name="objType"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:CODERiT.Logger.v._3._5.Log1">
+	<summary>
+ Creates a Logger Instance
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CODERiT.Logger.v._3._5.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:CODERiT.Logger.v._3._5.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:CODERiT.Logger.v._3._5.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

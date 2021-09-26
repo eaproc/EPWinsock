@@ -1,0 +1,557 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EPRO.Library.v4.Shell
+</name>
+</assembly>
+<members>
+<member name="M:EPRO.Library.v4.Shell.Modules.basRegistry.OpenSubKey(Microsoft.Win32.RegistryHive,System.String,System.Boolean)">
+	<summary>
+ For 64bit Registry
+ </summary>
+	<param name="ParentKey"></param>
+	<param name="SubKeyName"></param>
+	<param name="Writeable"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v4.Shell.OperatingSystem.MicrosoftOS">
+	<summary>
+ Microsoft Operating System Types.
+ Currently Supporting a few
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v4.Shell.OperatingSystem.GENERAL_PROGRAM_FILES_FOLDER">
+	<summary>
+ for both 32bit and 64bit
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.isWindowOn(System.String)">
+	<summary>
+ Check if there is any window on with this exact caption. NB: NOT Case - Sensitive
+ </summary>
+	<param name="WindowsCaption"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.GetWindowCaptionText(System.IntPtr)">
+	<summary>
+ Returns a Windows Caption Using Handle
+ </summary>
+	<param name="hWnd"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.GetWindowHandle__UsingCaption(System.String)">
+	<summary>
+ Get's Windows Handle By Using it's caption
+ </summary>
+	<param name="Caption"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.GetProcessID_From_Handle(System.IntPtr)">
+	<summary>
+ Gets a ProcessID from Pointer
+ </summary>
+	<param name="Hwnd"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.getOSType">
+	<summary>
+ Get the major versions of Microsoft Operating Systems
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.isThis64BitOS">
+	<summary>
+ Get true if this is 64bit OS
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.isThereWow64Folder">
+	<summary>
+ check if this folder exist [C:\Windows\SysWOW64] Which means is it 64bit
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.get32BitProgramFileFolder">
+	<summary>
+ Determines Which Program File Folder is In - Use
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.IsApplicationInstalled(System.String)">
+	<summary>
+ Check if component is installed by checking how the displayName is represented in registry
+ </summary>
+	<param name="pPartOfAppDisplayName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.isProcessRunning(System.String)">
+	<summary>
+ Checks if a process is running
+ </summary>
+	<param name="ProcessNameWithEXE"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.KillProcess(System.String)">
+	<summary>
+ Kill process if it is available
+ </summary>
+	<param name="ProcessNameWithEXE"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.isServiceAvailable(System.String)">
+	<summary>
+ Checks if a particular service is installed on this OS
+ </summary>
+	<param name="serviceName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.getServiceStatus(System.String)">
+	<summary>
+ gets a service status. It returns ServiceProcess.ServiceControllerStatus.StopPending  if the service is not found or error occured
+ </summary>
+	<param name="serviceName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.stopService(System.String)">
+	<summary>
+ Stops a service if it exists. I guess you should invoke this as an administrator 
+ NB: This is Sync Method. It doesnt return until it is done:)
+ </summary>
+	<param name="serviceName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.startService(System.String)">
+	<summary>
+ Starts a service if it exists. I guess you should invoke this as an administrator 
+ NB: This is Sync Method. It doesnt return until it is done:)
+ </summary>
+	<param name="serviceName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisAllowAddAndRemoveProgramPage(System.Boolean)">
+	<summary>
+ Allow or Disallow the Add and Remove Page
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisableMSI(System.Boolean)">
+	<summary>
+ Disable or Enable Microsoft Installer
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisableUSBDevices(System.Boolean)">
+	<summary>
+ Disable or Enable USB Devices
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.ShowHiddenFilesAndFolder(System.Boolean)">
+	<summary>
+ Show or Hide Hidden Files and Folders
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisableSystemRestore(System.Boolean)">
+	<summary>
+ Disable or Enable System Restore
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisableTaskManager(System.Boolean)">
+	<summary>
+ Disable or Enable a TaskManager
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisableRegistryTools(System.Boolean)">
+	<summary>
+ Disable or Enable a Registry Tools like RegEdit
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisableCommandPrompt(System.Boolean)">
+	<summary>
+ Disable or Enable a Command Prompt
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.DisableSytemDateTime(System.Boolean)">
+	<summary>
+ Disable or Enable a System Date Time Changing
+ </summary>
+	<param name="setValue"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.getScreenShotWithCursor(System.Windows.Forms.Cursor@)">
+	<summary>
+ Get Full Screenshot With Cursor. NB: No RawFormat Data
+ </summary>
+	<param name="_cursor">The cursor of the calling form</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.getScreenShotWithoutCursor">
+	<summary>
+ Return Screenshot without a cursor. NB: No RawFormat Data
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.isCertificatePresentOn(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+	<summary>
+ Checks if the specified certificate file is installed in the specified location
+ </summary>
+	<param name="certificateFullPath">The full path to the certificate locally</param>
+	<param name="certificateStoreLocation"></param>
+	<param name="certificateStore"></param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.isCertificateValid(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+	<summary>
+ Checks if a Certificate has not expired
+ </summary>
+	<param name="certificateFullPath">The full path to the certificate locally</param>
+	<param name="certificateStoreLocation"></param>
+	<param name="certificateStore"></param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.addCertificateOn(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+	<summary>
+ Adds a certificate to the specified location but it does not do it if it is already present and valid
+ </summary>
+	<param name="certificateFullPath">The full path to the certificate locally</param>
+	<param name="certificateStoreLocation"></param>
+	<param name="certificateStore"></param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.deleteCertificateOn(System.Text.StringBuilder,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+	<summary>
+ Delete a certificate to the specified location but it does not do it if it is NOT already present 
+ </summary>
+	<param name="certificateFullPath">The full path to the certificate locally</param>
+	<param name="certificateStoreLocation"></param>
+	<param name="certificateStore"></param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.deleteCertificateOn(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+	<summary>
+ Delete a certificate to the specified location but it does not do it if it is NOT already present 
+ </summary>
+	<param name="certificateName">Example "CN= EPRO CYBERSOFT"</param>
+	<param name="certificateStoreLocation"></param>
+	<param name="certificateStore"></param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.fetchCertificateOn(System.String)">
+	<summary>
+ fetch a certificate Locally
+ </summary>
+	<param name="certificateFullPath">The full path to the certificate locally</param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.fetchCertificateOn(System.Text.StringBuilder,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+	<summary>
+ fetch a certificate on store using local certificate match
+ </summary>
+	<param name="CertificateFullPath">Full path of the local certificate</param>
+	<param name="certificateStoreLocation"></param>
+	<param name="certificateStore"></param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.fetchCertificateOn(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+	<summary>
+ fetch a certificate on store using name
+ </summary>
+	<param name="CertificateName">Example "CN= EPRO CYBERSOFT"</param>
+	<param name="certificateStoreLocation"></param>
+	<param name="certificateStore"></param>
+	<returns></returns>
+	<remarks>NB: Return false might be due to invalid certificate file</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.addExecutorTo_RunAtStartUp(System.String)">
+	<summary>
+ Add an Executor to run at start up
+ </summary>
+	<param name="ExecutorPath"></param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.OperatingSystem.removeExecutorFrom_RunAtStartUp(System.String)">
+	<summary>
+ Removes an executor from run at start up
+ </summary>
+	<param name="ExecutorPath"></param>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v4.Shell.OperatingSystem">
+	<summary>
+ Perform Static Operating System Functions
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EPRO.Library.v4.Shell.Compression.Replace_Space">
+	<summary>
+ I will use this to address space in compression and extraction
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Compression.AddFileToZipPackage(System.IO.Packaging.ZipPackage,System.String,System.String)">
+	<summary>
+ Adds File to an open Zip Package
+ </summary>
+	<param name="zip">The zip Package</param>
+	<param name="FilePath">File to Add</param>
+	<param name="RelativeDirectoryPath">The relative Directory Path [Without the File Name]</param>
+	<remarks>Using Imports System.IO.Packaging</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Compression.AddNullFileToZipPackage(System.IO.Packaging.ZipPackage,System.String)">
+	<summary>
+ Adds File to an open Zip Package
+ </summary>
+	<param name="zip">The zip Package</param>
+	<param name="RelativeDirectoryPath">The relative Directory Path [Without the File Name]</param>
+	<remarks>Using Imports System.IO.Packaging</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Compression.AddDirectoryToZipPackage(System.IO.Packaging.ZipPackage,System.String,System.String)">
+	<summary>
+ Adds the directory to Package
+ </summary>
+	<param name="zip">The Zip Package</param>
+	<param name="DirectoryPath">The Directory to Add Full Path</param>
+	<param name="RelativePath">Accumulated Relative Path Along the Tree</param>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Compression.CreateZipFile(System.String,System.String,System.Boolean)">
+	<summary>
+ Zip a whole directory with all it's contents [It doesnt Includes the Parent Directory]
+ </summary>
+	<param name="_FileName">The .zip File Full Path</param>
+	<param name="DirectoryPath">The Directory That contains the files and sub folders to zip</param>
+	<returns></returns>
+	<remarks>Using Imports System.IO.Packaging</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Compression.CreateZipFile(System.String,System.String[])">
+	<summary>
+ Gets file and zip it.  [Only Files in Current Level]
+ </summary>
+	<param name="_Files">With their full Path</param>
+	<param name="_FileName">Zip File Name [Full Path]</param>
+	<returns></returns>
+	<remarks>Using Imports System.IO.Packaging</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Compression.ExtractZipFolder(System.String,System.String)">
+	<summary>
+ Extract the Zip File to the Specified Folder [Note: Then Zip File Must have been created by System.IO.Packaging] 
+ </summary>
+	<param name="ExtractToFolderPath">The Diretory to which the files and folders will be extracted to</param>
+	<param name="ZipFileFullPath">The Zip File</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v4.Shell.Compression">
+	<summary>
+ Contains Static Methods for compressing and extracting files.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.setFireWallEnable(System.Boolean)">
+	<summary>
+ Disable or Enable Firewall
+ </summary>
+	<param name="Enabled"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.setExceptionsEnable(System.Boolean)">
+	<summary>
+ Disable or Enable Firewall
+ </summary>
+	<param name="Enabled"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.createInboundPortExceptions(System.String,System.String,System.String)">
+	<summary>
+ Create an Inbound Port Exception. NB: Winxp allows only 1 port per declaration
+ </summary>
+	<param name="sFirewallName"></param>
+	<param name="sFirewallDescription"></param>
+	<param name="sPort">Currently Just TCP Protocol</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.isInboundPortExceptionValid(System.String,System.String)">
+	<summary>
+ Checks if this FireWallName Has been configured
+ </summary>
+	<param name="sFirewallName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.AddICMPv4Exception">
+	<summary>
+ Only for 64 Bit Systems and Windows XP. Adds ICMPv4 to Firewall
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.isICMPv4Allowed">
+	<summary>
+ Checks if the ICMPv4 is Already Enabled
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.AddApplicationTCPEnableException(System.String,System.String)">
+	<summary>
+ Allows the Specified Executor to access TCP Ports
+ </summary>
+	<param name="ApplicationName"></param>
+	<param name="ExecutorFullPath"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Firewall.isApplicationTCPEnableExceptionAdded(System.String,System.String)">
+	<summary>
+ Check if this application is allowed for TCP Communication
+ </summary>
+	<param name="ApplicationName"></param>
+	<param name="ExecutorFullPath"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v4.Shell.Firewall">
+	<summary>
+ perform Firewall Operations
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.ShellWait.WaitProcessToExit(System.String,Microsoft.VisualBasic.AppWinStyle)">
+	<summary>
+ Using Command Prompts Title to Pick Process that will return only on exit to command prompt
+ </summary>
+	<param name="filePath"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.CreateApplicationExtension(System.String,System.String,System.String,System.String)">
+	<summary>
+ Create a customised extension that opens with an executor
+ </summary>
+	<param name="ExtensionWithoutDot">Just the name of the extension without the preceeding dot (.) like txt</param>
+	<param name="OpenWithExecPath">Executor full path</param>
+	<param name="IconPath">Icon Full Path</param>
+	<param name="extDescription">The description of the extension</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v4.Shell.Registry.RegEditKeys">
+	<summary>
+ Main Levels in RegEdit
+ </summary>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.readRegistryObjectValue(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Fetch Object Value from Registry if the path exist
+ </summary>
+	<param name="sLevel">Registry Main Levels [Local_Machine ...]</param>
+	<param name="sPath">Path to read not including the Main Level Folder Name</param>
+	<param name="sKey">Key Name to Read in the path folder</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.readRegistryStringValue(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Fetch String Value from Registry if the path exist
+ </summary>
+	<param name="sLevel">Registry Main Levels [Local_Machine ...]</param>
+	<param name="sPath">Path to read not including the Main Level Folder Name</param>
+	<param name="sKey">Key Name to Read in the path folder</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.readRegistryDoubleValue(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Fetch Double Value from Registry if the path exist
+ </summary>
+	<param name="sLevel">Registry Main Levels [Local_Machine ...]</param>
+	<param name="sPath">Path to read not including the Main Level Folder Name</param>
+	<param name="sKey">Key Name to Read in the path folder</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.CreateASubKey(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Create a Subkey [Folder] in the path specified or open it if it already exists
+ </summary>
+	<param name="sLevel">Registry Main Levels [Local_Machine ...]</param>
+	<param name="sPath">Path to read not including the Main Level Folder Name</param>
+	<param name="sSubKeyName">Sub Key Folder to Create</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.DeleteASubKey(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Delete a Subkey [Folder] in the path specified
+ </summary>
+	<param name="sLevel">Registry Main Levels [Local_Machine ...]</param>
+	<param name="sPath">Path to read not including the Main Level Folder Name</param>
+	<param name="sSubKeyName">Sub Key Folder to Deletes</param>
+	<returns></returns>
+	<remarks>Supports Recursive</remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.CreateAKey(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String,System.String,Microsoft.Win32.RegistryValueKind)">
+	<summary>
+ Create a Key in the path specified
+ </summary>
+	<param name="sLevel">Registry Main Levels [Local_Machine ...]</param>
+	<param name="sPath">Path to read not including the Main Level Folder Name</param>
+	<param name="sKeyName">Sub Key Name to Create</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.DeleteAKey(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Delete a Key in the path specified
+ </summary>
+	<param name="sLevel">Registry Main Levels [Local_Machine ...]</param>
+	<param name="sPath">Path to read not including the Main Level Folder Name</param>
+	<param name="sKeyName">Sub Key Name to Delete</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.getRegistrySubKeyFolder(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.Boolean)">
+	<summary>
+ Get a SubKey Folder if it exist
+ </summary>
+	<param name="sPath"></param>
+	<param name="OpenInWriteMode">If it is in write mode  ... anything you read will return nothing. 
+ Otherwise, will pop exception if writing in read mode</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.searchKeyLikeInSubFolder(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Check through the sub folder if the key exists
+ </summary>
+	<param name="sLevel"></param>
+	<param name="sPath"></param>
+	<param name="sKeySearching"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.searchDataLikeInSubFolder(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String)">
+	<summary>
+ Check through the sub folder if it exists if there is any key with a data [Like] Not Match All
+ </summary>
+	<param name="sLevel"></param>
+	<param name="sPath"></param>
+	<param name="data"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.searchDataLikeInSubFolder(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String,System.String)">
+	<summary>
+ Check through the sub folder if it exists if there is any key with a data [Like] Not Match All.
+ NB: But must match both data1 and data2
+ </summary>
+	<param name="sLevel"></param>
+	<param name="sPath"></param>
+	<param name="data"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:EPRO.Library.v4.Shell.Registry.deleteAllSubKeysInThisPathExcept(EPRO.Library.v4.Shell.Registry.RegEditKeys,System.String,System.String[])">
+	<summary>
+ Delete all subfolders in a path except sum listed ones
+ </summary>
+	<param name="sLevel"></param>
+	<param name="sPath"></param>
+	<param name="ExceptSubKeys"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:EPRO.Library.v4.Shell.Registry">
+	<summary>
+ Contains Functions that acts on Registry [Invoke as Admin]
+ </summary>
+	<remarks>Always invoke as administrator</remarks>
+</member><member name="P:EPRO.Library.v4.Shell.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:EPRO.Library.v4.Shell.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:EPRO.Library.v4.Shell.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
